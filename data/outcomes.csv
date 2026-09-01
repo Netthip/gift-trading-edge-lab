@@ -1,0 +1,1 @@
+signal_id,strategy_id,ticker,market_date,entry,stop,tp1,tp2,close_1d,return_1d,close_3d,return_3d,close_5d,return_5d,close_10d,return_10d,close_20d,return_20d,mfe,mae,first_hit,first_hit_date,final_status,realized_r,spy_return_5d,spy_return_10d,excess_return_5d,excess_return_10d,last_updated,notes
