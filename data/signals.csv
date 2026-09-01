@@ -1,0 +1,1 @@
+signal_id,scan_ts_bkk,market_date,ticker,company,strategy_id,strategy_name,strategy_version,setup_score,state,signal_price,entry,stop,tp1,tp2,reward_risk,shadow_position_thb,planned_risk_thb,timeframe,trend_evidence,support_evidence,volume_evidence,catalyst_evidence,trigger,invalidation,source_urls,market_regime,sector,scan_coverage,data_quality,notes
