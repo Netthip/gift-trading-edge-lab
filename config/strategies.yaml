@@ -1,0 +1,56 @@
+schema_version: 1
+updated: 2026-09-01
+shadow_wallet_thb_per_strategy: 10000
+planned_risk_thb_per_trade: 200
+benchmark: SPY
+strategies:
+  - id: GR1
+    name: Gift Rebound Classic
+    version: "1.0"
+    status: ACTIVE
+    hypothesis: Reversal confirmation near meaningful support can produce a tradable rebound.
+    eligibility: Liquid U.S.-listed stock; identifiable support/base; no buy merely because price fell.
+    trigger: Bullish reversal/reclaim with supportive daily-weekly structure and meaningful volume.
+    stop_rule: Below invalidation/support or structural low; size to planned risk.
+    target_rule: Prefer >=2R; use next resistance and structure for TP1/TP2.
+    time_exit_trading_days: 10
+  - id: MR1
+    name: Oversold Reclaim
+    version: "1.0"
+    status: ACTIVE
+    hypothesis: Short-term mean reversion after an oversold condition and price reclaim can outperform blind dip buying.
+    eligibility: Material oversold stretch and adequate liquidity; avoid broken binary-event situations.
+    trigger: Reclaim a defined short-term level such as prior-day high or near-term EMA with improving volume.
+    stop_rule: Below reversal low or reclaim failure; fixed risk budget.
+    target_rule: First resistance near 1.5-2R; second target >=2R when structure allows.
+    time_exit_trading_days: 5
+  - id: TP1
+    name: Trend Pullback
+    version: "1.0"
+    status: ACTIVE
+    hypothesis: Buying a controlled pullback inside an established uptrend may have better expectancy than catching reversals.
+    eligibility: Primary trend up; preferably above medium/long moving averages with higher-high/higher-low structure.
+    trigger: Pullback holds or reclaims EMA20/EMA50 or prior breakout area and forms a higher low/bullish confirmation.
+    stop_rule: Below higher-low/support invalidation; fixed risk budget.
+    target_rule: Prior high/next resistance; prefer >=2R.
+    time_exit_trading_days: 10
+  - id: BR1
+    name: Breakout Retest
+    version: "1.0"
+    status: ACTIVE
+    hypothesis: A breakout that survives a retest can filter false breakouts and create cleaner invalidation.
+    eligibility: Clear multi-day resistance with adequate liquidity and no extreme extension.
+    trigger: Breakout then retest holds the breakout level; bullish response/volume confirms.
+    stop_rule: Below retest low or breakout-level failure; fixed risk budget.
+    target_rule: Measured next resistance or >=2R where practical.
+    time_exit_trading_days: 10
+  - id: VR1
+    name: Volume Washout Reversal
+    version: "1.0"
+    status: ACTIVE
+    hypothesis: Capitulation-like selling followed by a reclaim can mark exhaustion and a fast rebound.
+    eligibility: Abnormally high-volume decline near a meaningful level; exclude obvious insolvency/delist/binary damage.
+    trigger: Long lower-tail/reversal day or next-session reclaim after washout, with price holding above washout low.
+    stop_rule: Below washout low; fixed risk budget.
+    target_rule: Nearest supply/resistance; prefer >=2R.
+    time_exit_trading_days: 5
